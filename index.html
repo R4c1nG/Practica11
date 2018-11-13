@@ -11,7 +11,44 @@
 <body>
         <img src="images/8HHlkWH.png">
     <div>
-        
+        <table>
+        <form action="formulario.php" method="POST">
+            Tratamiento:
+            <p><input type="radio" name="radio3" value="1" checked>Sr.
+                <input type="radio" name="radio3" value="2">Sra.
+            <p>Nombre: <input type="text" name="nombre" required></p>
+            </p>
+
+            Pais de nacimiento:
+            <p><select name="menu">
+                <option value="1">ESPAÑA</option>
+                <option value="2">ETHIOPIA</option>
+                <option value="3">CHIPRE</option>
+                <option value="4">COLOMBIA</option>
+                <option value="5">COSTA RICA</option>
+            </select></p>
+
+            Trabajo:
+            <p><select name="menu">
+                <option value="1">No Trabaja</option>
+                <option value="2">Por cuenta Ajena</option>
+                <option value="3">Por cuenta Propia</option>
+            </select></p>
+
+            Propositos de la cuenta:
+            <p><select name="menu">
+                <option value="1">Domiciliar mi cuenta, recibos</option>
+                <option value="2">Gestión de mi empresa</option>
+                <option value="3">Ahorro</option>
+                <option value="4">Fondos, Planes, Bolsa</option>
+                <option value="5">Obtener financiación</option>
+                <option value="6">Gestión de mi negocio</option>
+                <option value="7">Domiliciar recibos</option>
+                <option value="8">Realizar Ingrresos</option>
+            </select></p>
+            <hr>
+        </form>
+        </table>
     </div>
 </body>
 </html>
