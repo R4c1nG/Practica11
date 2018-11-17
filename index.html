@@ -6,87 +6,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica 11</title>
+    <style>
+    
+    table.maint {
+        border: 1px solid black;
+        font-family: arial, sans-serif;
+        font-size: 85%;
+    }
+    table.grey {
+        font-family: arial, sans-serif;
+        font-size: 85%;
+        background-color: lightgrey;
+        width: 100%;
+    }
+
+    td,tr {
+    text-align: left;
+    padding: -0px;
+    }
+
+    p.grey {
+        color: grey;
+        text-align: justify;
+        font-size: 85%;
+    }
+
+    tr.greytr {
+        background-color: lightgrey;
+        border-color: lightgrey;
+        border: 1px solid lightgrey;
+    }
+
+    input.button {
+        background-color: darkorange;
+        border-color: darkorange;
+        color: white;
+        padding: 15px 32px;
+        font-size: 22px;
+        display:block;
+        margin:0 auto;
+    }
+    input.fix {
+        width: 80%;
+    }
+    select {
+        width: 80%;
+        text-overflow: ellipsis;
+    }
+
+    img.img2 {
+        float: left;
+    }
+
+    </style>
 </head>
 
 <body>
-        <img src="images/8HHlkWH.png">
-    <div>
-        <table width="80%">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        <form action="formulario.php" method="POST">
-            Tratamiento:
-            <p><input type="radio" name="radio3" value="1" checked>Sr.
-                <input type="radio" name="radio3" value="2">Sra.
-            <p>Nombre: <input type="text" name="nombre" required></p>
-            </p>
+    <img src="images/nWPwLbn.png" class="img2">
+    <img src="images/8HHlkWH.png">
+    <form action="formulario.php" method="POST">
+        <table class="maint">
+        <tr>
+            <td>
+                <p>Tratamiento: *</p>
+                <p><input type="radio" name="radio3" value="1" checked>Sr.
+                <input type="radio" name="radio3" value="2">Sra.</p>
+            </td>
+            
+            <td>
+                <p>Nombre: *</p>
+                <p><input type="text" name="nombre" required class="fix"></p>
+            </td>
+                
+            <td>
+                <p>Apellido 1: *</p>
+                <p><input type="text" name="apellido1" required class="fix"></p>
+            </td>
 
-            Pais de nacimiento:
-            <p><select name="menu">
-                <option value="1">ESPAÑA</option>
-                <option value="2">ETHIOPIA</option>
-                <option value="3">CHIPRE</option>
-                <option value="4">COLOMBIA</option>
-                <option value="5">COSTA RICA</option>
-            </select></p>
+            <td>
+                 <p>Apellido 2:</p>
+                 <p><input type="text" name="apellido2" class="fix"></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p>Tipo Doc: *</p>
+                <p><select name="menu" required class="fix">
+                    <option value="1">D.N.I.</option>
+                    <option value="2">Tarj. Resid./NIE</option>
+                </select></p>
+            </td>
 
-            Trabajo:
-            <p><select name="menu">
+            <td>
+                <p>Nº Doc: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+
+            <td>
+                <p>Fecha de nacimiento: *</p>
+                <p><input type="date" required class="fix"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Pais de nacimiento: *</p>
+                <p><select name="menu" required class="fix">
+                    <option value="1">ESPAÑA</option>
+                    <option value="2">ETHIOPIA</option>
+                    <option value="3">CHIPRE</option>
+                    <option value="4">COLOMBIA</option>
+                    <option value="5">COSTA RICA</option>
+                </select></p>
+            </td>
+            
+            <td>
+                <p>Nacionalidad: *</p>
+                <p><select name="menu" required class="fix">
+                    <option value="1">ESPAÑA</option>
+                    <option value="2">CONGO</option>
+                    <option value="3">CUBA</option>
+                    <option value="4">DINAMARCA</option>
+                    <option value="5">ECUADOR</option>
+                 </select></p>
+            </td>
+
+            <td>
+                <p>Segunda nacionalidad:</p>
+                <p><select name="menu" class="fix">
+                <option value="1">ALBANIA</option>
+                <option value="2">ALEMANIA</option>
+                <option value="3">ANDORRA</option>
+                <option value="4">ANGOLA</option>
+                <option value="5">ARGELIA</option>
+                </select></p>
+            </td>
+
+            <td>
+                <p>Pais residencia fiscal: *</p>
+                <p><select name="menu" required class="fix">
+                <option value="1">AUSTRALIA</option>
+                <option value="2">ARUBA</option>
+                <option value="3">ARMENIA</option>
+                <option value="4">AZERBAIYAN</option>
+                <option value="5">BAHAMAS</option>
+                </select></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                <p><input type="checkbox" name="+residencias">Tengo más de una residencia fiscal</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Trabajo: *</p>
+                <p><select name="menu" required class="fix">
                 <option value="1">No Trabaja</option>
                 <option value="2">Por cuenta Ajena</option>
                 <option value="3">Por cuenta Propia</option>
-            </select></p>
+                </select></p>
+            </td>
 
-            Propositos de la cuenta:
-            <p><select name="menu">
-                <option value="1">Domiciliar mi cuenta, recibos</option>
-                <option value="2">Gestión de mi empresa</option>
-                <option value="3">Ahorro</option>
-                <option value="4">Fondos, Planes, Bolsa</option>
-                <option value="5">Obtener financiación</option>
-                <option value="6">Gestión de mi negocio</option>
-                <option value="7">Domiliciar recibos</option>
-                <option value="8">Realizar Ingrresos</option>
-            </select></p>
-
-            Nacionalidad:
-            <p><select name="menu">
-                <option value="1">ESPAÑA</option>
-                <option value="2">CONGO</option>
-                <option value="3">CUBA</option>
-                <option value="4">DINAMARCA</option>
-                <option value="5">ECUADOR</option>
-            </select></p>
-
-            Tipo de actividad:
-            <p><select name="menu">
+            <td>
+                <p>Tipo de Actividad: *</p>
+                <p><select name="menu" required class="fix">
                 <option value="1">Tarea de hogar</option>
                 <option value="2">Estudiante</option>
                 <option value="3">Desempleado</option>
                 <option value="4">Jubilado</option>
                 <option value="5">Pensionista</option>
-            </select></p>
+                </select></p>
+            </td>
 
-            Origen de sus ahorros:
-            <p><select name="menu">
-                <option value="1">Mi nomina, pensión o prestación por desempleo</option>
+            <td>
+                <p>Sector Profesional: *</p>
+                <p><select name="menu" required class="fix">
+                <option value="1">No trabaja</option>
+                <option value="2">Banca</option>
+                <option value="3">Construcción</option>
+                <option value="4">Energía</option>
+                <option value="5">Industria</option>
+                <option value="6">Recursos humanos</option>
+                <option value="7">Servicios</option>
+                </select></p>
+            </td>
+
+            <td>
+                <p>Empresa: *</p>
+                <p><input type="text" required class="fix"></p
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Propósito de la cuenta: *</p>
+                <p><select name="menu" required class="fix">
+                    <option value="1">Domiciliar mi cuenta, recibos</option>
+                    <option value="2">Gestión de mi empresa</option>
+                    <option value="3">Ahorro</option>
+                    <option value="4">Fondos, Planes, Bolsa</option>
+                    <option value="5">Obtener financiación</option>
+                    <option value="6">Gestión de mi negocio</option>
+                    <option value="7">Domiliciar recibos</option>
+                    <option value="8">Realizar Ingrresos</option>
+                    </select></p>
+            </td>
+
+            <td>
+                <p>Origen de sus ahorros: *</p>
+                <p><select name="menu" required class="fix">
+                <option value="1">Mi nomina o pensión</option>
                 <option value="2">Mi empresa o negocio</option>
                 <option value="3">Rentas Inmobiliarias</option>
                 <option value="4">Rentas de capital</option>
-                <option value="5">ECUADOR</option>
-            </select></p>
+                <option value="5">Prestaciones sociales</option>
+                </select></p>
+            </td>
+        </tr>
 
-            <hr>
-        </form>
-    </div>
+        <td colspan="4">
+        <table class="grey">
+        <tr>
+            <td>
+                <p>Tipo de via: *</p>
+                <p><select name="menu" required class="fix">
+                <option value="1">CALLE</option>
+                <option value="2">AGRUPACION</option>
+                <option value="3">ALAMEDA</option>
+                <option value="4">BLOQUE</option>
+                <option value="5">BAJADA</option>
+                </select></p>
+             </td>
+
+            <td>
+                <p>Dirección: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+
+            <td>
+                <p>Número: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+
+            <td>
+                <p>Piso</p>
+                <p><input type="text" class="fix"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Urb./Pol./Otros:</p>
+                <p><input type="text" class="fix"></p>
+            </td>
+                
+            <td>
+                <p>Localidad: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+
+            <td>
+                <p>Provincia: *</p>
+                <p><select name="menu" required class="fix">
+                <option value="1">CORDOBA</option>
+                <option value="2">CEUTA</option>
+                <option value="3">TOLEDO</option>
+                <option value="4">GIRONA</option>
+                <option value="5">CUENCA</option>
+                </select></p>
+            </td>
+
+            <td>
+                <p>Codigo postal: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>Teléfono móvil: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+
+            <td>
+                <p>Teléfono particular:</p>
+                <p><input type="text" class="fix"></p>
+            </td>
+
+            <td>
+                <p>Dirección de e-mail: *</p>
+                <p><input type="text" required class="fix"></p>
+            </td>
+            <td>
+            </td>
+        </tr>
+        </table>
+        </td>
+
+        <tr>
+        <td colspan="4">
+        <hr>
+        <p>Para ofrecerle un mejor servicio nos sería útil conocer si posee en otra  entidad:</p>
+        <p><input type="checkbox" width>Plan de pensiones
+        <input type="checkbox">Fondos
+        <input type="checkbox">Acciones
+        <input type="checkbox">Hipoteca
+        <input type="checkbox">Préstamo
+        <input type="checkbox">Seguro de vida</p>
+        <hr>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+        <p class="grey">Puede consultar nuestra web o solicitarnos toda la <u>Información</u><br>
+        <u>Precontractual</u> de nuestros productos. Al pulsar "Continuar" está<br>
+        >aceptando la <u>Cláusula de Protección de datos.</u></p>
+        <p class="grey">(*) Los campos marcados con asterisco son obligatorios.</p>
+        </td>
+        
+        <td colspan="2">
+            <input type="submit" value="-> Continuar" class="button">
+        </td>
+        </tr>
+    </table>
+    </form>
 </body>
 </html>
